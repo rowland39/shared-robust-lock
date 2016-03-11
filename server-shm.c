@@ -82,7 +82,7 @@ main(void)
     }
 
     sleep(10);
-    
+
     if (pthread_mutex_unlock(lock) != 0) {
         fprintf(stderr, "pthread_mutex_unlock error\n");
         exit(EXIT_FAILURE);

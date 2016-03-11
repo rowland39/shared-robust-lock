@@ -42,7 +42,7 @@ main(void)
         fprintf(stderr, "pthread_mutexattr_setrobust error\n");
         exit(EXIT_FAILURE);
     }
-    
+
     if ((lock = (pthread_mutex_t *)mmap(NULL, sizeof(pthread_mutex_t),
         PROT_READ|PROT_WRITE, MAP_SHARED, fd, 0)) == MAP_FAILED) {
         perror("mmap error");
@@ -73,7 +73,7 @@ main(void)
     }
 
     sleep(10);
-    
+
     if (pthread_mutex_unlock(lock) != 0) {
         fprintf(stderr, "pthread_mutex_unlock error\n");
         exit(EXIT_FAILURE);
