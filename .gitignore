@@ -1,0 +1,6 @@
+*.swp
+*.o
+client-mmap
+client-shm
+server-mmap
+server-shm
