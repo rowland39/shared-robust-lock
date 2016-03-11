@@ -96,5 +96,10 @@ main(void)
         exit(EXIT_FAILURE);
     }
 
+    if (shmdt(lock) == -1) {
+        perror("shmdt error");
+        exit(EXIT_FAILURE);
+    }
+
     exit(EXIT_SUCCESS);
 }

@@ -60,8 +60,8 @@ main(void)
 
     printf("Unlocked.\n");
 
-    if (shmctl(shmid, IPC_RMID, 0) == -1) {
-        perror("shmctl error");
+    if (shmdt(lock) == -1) {
+        perror("shmdt error");
         exit(EXIT_FAILURE);
     }
 
