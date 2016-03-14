@@ -12,12 +12,6 @@ ifeq ($(UNAME_S),FreeBSD)
     CC=cc
 endif
 
-ifeq ($(UNAME_S),Darwin)
-    CFLAGS=
-    LDFLAGS=-lpthread
-    CC=cc
-endif
-
 .PHONY: all
 all: server-mmap client-mmap server-shm client-shm
 
